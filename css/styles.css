@@ -138,11 +138,12 @@ video {
     padding: 2rem;
 }
 
-.information__tittle {
+.information__tittle, .important__tittle, .womens__tittle {
     position: relative;
     font-size: 45px;
     color: var(--tittles);
     margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 .information__content {
@@ -185,6 +186,183 @@ video {
     text-transform: uppercase;
 }
 
+/* important section */
+.important {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.important__tittle {
+    display: flex;
+    justify-content: center;
+}
+
+.important__percentage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.percentage__number {
+    font-size: 86px;
+    color: var(--tittles);
+    text-align: center;
+}
+
+.percentage__description {
+    font-size: 16px;
+    color: var(--text);
+    text-align: center;
+}
+
+/* womens and woman section */
+.womens { 
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-bottom: 45px;
+    padding: 2rem;
+}
+
+.womens__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.womens__card, .woman__card {
+    border: #1b3b6f 2px solid;
+
+}
+
+.womens-card__img, .woman-card__img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.womens-card__role, .woman-card__role {
+    color: var(--text);
+    font-size: 18px;
+    padding: .7rem;
+    font-weight: 400;
+    box-shadow: 0px 2px 2px  rgba(0, 0, 0, 0.103) ;
+}
+
+.womens-card__name, .woman-card__name {
+    color: var(--text);
+    font-size: 24px;
+    padding: .7rem;
+    font-weight: 600;
+    
+}
+
+.womens-card__country, .woman-card__country {
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: .7rem;
+    margin-bottom: 1rem;
+}
+
+.womens-card__btn {
+    display: flex;
+    width: 50%;
+    padding: 10px;
+    justify-content: center;
+    background-color: var(--background);
+    color: var(--tittles);
+    text-decoration: none;
+    border: 2px solid var(--tittles);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    margin-left: 25%;
+    text-transform: uppercase;
+}
+
+/* woman section */
+.woman {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 35px;
+    margin-bottom: 45px;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.woman__text{
+    text-align: center;
+}
+
+/* 
+connect section */
+.connect {
+    background-color: #1b3b6f;
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-bottom: 45px;
+    padding: 2rem;
+}
+
+.connect__tittle {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.connect__tittle h2 {
+    color: #fffbf5;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.connect__cards { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.connect__card--only {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-color: var(--background);
+}
+
+.cards__img img {
+    width: 100%;
+}
+
+.cards__text--information h3{
+    margin-top: .2rem;
+    padding: .2rem;
+}
+
+.cards__text--information p {
+    display: flex;
+    justify-content: center;
+    padding: 0 .5rem ;
+}
+
+.cards__link {
+    display: flex;
+    width: 50%;
+    padding: 10px;
+    justify-content: center;
+    background-color: var(--background);
+    color: var(--tittles);
+    text-decoration: none;
+    border: 2px solid var(--tittles);
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 25%;
+    text-transform: uppercase;
+}
+
+
 /* header efects */
 
 .navbar__text a:hover {
@@ -208,7 +386,7 @@ video {
 }
 
 /* Todos con un moviento hacía arriba suave al entrar a la página */
-.hero__text, .information__content {
+.hero__text, .information__content, .important, .womens {
     animation-name: moveUp;
     animation-duration: 2s;
     animation-delay: 0.1s;
@@ -280,6 +458,73 @@ a.hero__btn--scroll {
 }
 
 .information__img:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: transform 0.5s ease-in-out;
+}
+
+/* important effect */
+.important__tittle:hover {
+    color: var(--text);
+    transition: color 0.5s ease-in-out;
+}
+
+.percentage__number:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* womens and woman effects */
+
+.womens__tittle:hover {
+    color: var(--text);
+    transition: color 0.5s ease-in-out;
+}
+
+.womens__card:hover {
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.womens-card__name:hover{ 
+    color: var(--tittles);
+}
+
+.womens-card__btn:hover {
+    background-color: var(--tittles);
+    color: var(--background);
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.woman__title:hover {
+    color: var(--text);
+    transition: color 0.5s ease-in-out;
+}
+
+.woman__card:hover {
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.woman-card__name:hover{ 
+    color: var(--tittles);
+}
+
+/* connect effects */
+
+.connect__card--only:hover{
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.cards__link:hover {
+
+    background-color: var(--tittles);
+    color: var(--background);
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
