@@ -14,10 +14,10 @@
     <header class="header">
         <nav class="header__nav">
             <ul class="nav__navbar">
-                <li class="navbar__text"><a href="#container">Home</a></li>
-                <li class="navbar__text"><a href="#information">Información</a></li>
-                <li class="navbar__text"><a href="#womens">Mujeres lideres</a></li>
-                <li class="navbar__text"><a href="#connect">Conecta</a></li>
+                <li class="navbar__text"><a class="text" href="#container">Home</a></li>
+                <li class="navbar__text"><a class="text" href="#information">Información</a></li>
+                <li class="navbar__text"><a class="text" href="#womens">Mujeres lideres</a></li>
+                <li class="navbar__text"><a class="text" href="#connect">Conecta</a></li>
             </ul>
         </nav>
     </header>
@@ -60,15 +60,15 @@
                 <p class="important__parraf">Aunque las mujeres representan más del 50% de la población, en tecnología son apenas el 28%. ¿Qué nos estamos perdiendo?</p>
             <div class="important__percentage">
                 <div class="percentage">
-                    <h3 class="percentage__number">28%</h3>
+                    <h3 class="percentage__number" data-target="28">0%</h3>
                     <p class="percentage__description">de participación femenina en TI (Uruguay)</p>
                 </div>
                 <div class="percentage">
-                    <h3 class="percentage__number">31%</h3>
+                    <h3 class="percentage__number" data-target="31">0%</h3>
                     <p class="percentage__description">menos salario en puestos equivalentes</p>
                 </div>
                 <div class="percentage">
-                    <h3 class="percentage__number">9%</h3>
+                    <h3 class="percentage__number" data-target="9">0%</h3>
                     <p class="percentage__description">roles senior en América Latina</p>
                 </div>
             </div>
@@ -76,7 +76,10 @@
         <section class="information" id="information-brecha">
             <h2 class="information__tittle">Causas de la brecha</h2>
             <div class="information__content">
-                <img class="information__img" src="img_video/brechaimgen.jpeg" alt="mujer de espaldas con una laptop">
+                <div class="content__grid"> 
+                    <img class="information__img" src="img_video/brechaimgen2.jpg" alt="mujer de espaldas con una laptop">
+                    <p class="img__credic">Imagen tomada de: <a href="https://forojuridico.mx/de-que-hablamos-cuando-nos-referimos-a-la-brecha-digital-de-genero/" class="credic">forojuridico.mx</a></p>
+                </div>
                 <p class="information__text">Seguramente, te pregunaras a que se debe esta brecha, por que tantas mujeres que han imactado a esta industria son  tan vagamente recordadas, o por que al entrar a un salon de clases de informatica logras apreciar rapidamente que en su mayoria son hombres.
                 La persistencia de la desigualdad se atribuye a factores culturales y estructurales. 
                 Existen estereotipos de género arraigados (por ejemplo, considerar que “la tecnología es cosa de hombres”), 
@@ -89,29 +92,30 @@
             <h2 class="womens__tittle">Mujeres lideres</h2>
             <div class="womens__grid">
                 <article class="womens__card">
-                        <img class="womens-card__img" src="img_video/mujeresinformacion.png" alt="">
+                        <img class="womens-card__img" src="img_video/GiulianaCorbo2.jpeg" alt="foto de Giuliana Corbo">
                         <h3 class="womens-card__role">CEO de Nearsure</h3>
                         <h2 class="womens-card__name">Giuliana Corbo</h2>
                         <p class="womens-card__country">Uruguay</p>
-                        <button class="womens-card__btn" id="card__btn--lider1" data-id="nombre-1">Leer más</button>
+                        <button class="womens-card__btn" id="card__btn--lider1" >Leer más</button>
                 </article>
                 <article class="womens__card">
-                        <img class="womens-card__img" src="img_video/mujeresinformacion.png" alt="">
+                        <img class="womens-card__img" src="img_video/AnaEchavarren2.jpg" alt="foto de Ana Inés Echavarren">
                         <h3 class="womens-card__role">CEO de Infocorp</h3>
                         <h2 class="womens-card__name">Ana Inés Echavarren</h2>
                         <p class="womens-card__country">Uruguay</p>
-                        <button class="womens-card__btn" id="card__btn--lider2" data-id="nombre-2">Leer más</button>
+                        <button class="womens-card__btn" id="card__btn--lider2" >Leer más</button>
                 </article>
                 <article class="womens__card">
-                        <img class="womens-card__img" src="img_video/mujeresinformacion.png" alt="">
+                        <img class="womens-card__img" src="img_video/MarianaCosta2.jpg" alt=" foto de Mariana Costa Checa">
                         <h3 class="womens-card__role">Cofundadora y CEO de Laboratoria</h3>
                         <h2 class="womens-card__name">Mariana Costa Checa</h2>
                         <p class="womens-card__country">Perú</p>
-                        <button class="womens-card__btn" id="card__btn--lider3" data-id="nombre-3">Leer más</button>
+                        <button class="womens-card__btn" id="card__btn--lider3" >Leer más</button>
                 </article>
             </div>
         </section>
         <section class="woman" id="woman-1">
+            <div class="woman__content">
             <div class="woman__text lider1">
                 <p>empresa uruguaya de outsourcing tecnológico con
 600 empleados en 20 países . Contadora pública egresada de la Universidad de la República
@@ -121,13 +125,16 @@ talento</q>. Bajo su liderazgo la compañía busca demostrar al mundo el potenci
 uruguayo en TI.</p>
             </div>
             <div class="woman__card">
-                    <img class="woman-card__img" src="img_video/mujeresinformacion.png" alt="">
+                    <img class="woman-card__img" src="img_video/GiulianaCorbo1.jpeg" alt=" foto de Giuliana Corbo">
                     <h3 class="woman-card__role">CEO de Nearsure</h3>
                     <h2 class="woman-card__name">Giuliana Corbo</h2>
                     <p class="woman-card__country">Uruguay</p>
             </div>
+            </div>
+            <span class="close-1">x</span>
         </section>
-        <section class="woman" id="woman-2">
+        <section class="woman" id="woman-2">  
+            <div class="woman__content">
             <div class="woman__text lider2">
                 <p>empresa de software de banca digital presente
 en más de 40 países . Ingeniera en Computación por la Universidad de la República, trabaja
@@ -137,13 +144,16 @@ tecnología</q> . Integra además la Cámara Uruguaya de TI (CUTI) para impulsar
 la visibilidad femenina en el sector.</p>
             </div>
             <div class="woman__card">
-                    <img class="woman-card__img" src="img_video/mujeresinformacion.png" alt="">
+                    <img class="woman-card__img" src="img_video/AnaEchavarren1.jpg" alt=" foto de Ana Inés Echavarren">
                     <h3 class="woman-card__role">CEO de Infocorp</h3>
                     <h2 class="woman-card__name">Ana Inés Echavarren</h2>
                     <p class="woman-card__country">Uruguay</p>
             </div>
+            </div>
+            <span class="close-2">x</span>
         </section>
         <section class="woman" id="woman-3">
+        <div class="woman__content">
             <div class="woman__text lider3">
                 <p>organización social que capacita
 a mujeres en desarrollo web y UX . Emprendedora peruana formada en negocios y
@@ -154,11 +164,13 @@ liderazgo en América Latina </q>, enfatizando la importancia de cultivar nuevas
 tecnología.</p>
             </div>
             <div class="woman__card">
-                    <img class="woman-card__img" src="img_video/mujeresinformacion.png" alt="">
+                    <img class="woman-card__img" src="img_video/MarianaCosta1.jpg" alt=" foto de Mariana Costa Checa">
                     <h3 class="woman-card__role">Cofundadora y CEO de Laboratoria</h3>
                     <h2 class="woman-card__name">Mariana Costa Checa</h2>
                     <p class="woman-card__country">Perú</p>
             </div>
+        </div>
+        <span class="close-3">x</span>
         </section>
         <section class="connect" id="connect">
             <div class="connect__tittle">
@@ -167,7 +179,7 @@ tecnología.</p>
             <div class="connect__cards">
             <div class="connect__card--only">
                 <div class="cards__img">
-                    <img src="img_video/brechaimgen.jpeg" alt="">
+                    <img src="img_video/mujeres-tics-latam.jpg" alt=" logo de Mujeres TICS Latam">
                 </div>
                 <div class="cards__text--information">
                     <h3>Comunidad Mujeres TICS Latam (México)</h3>
@@ -182,7 +194,7 @@ anunciarse en sus redes sociales)</p>
             </div>
             <div class="connect__card--only">
                 <div class="cards__img">
-                    <img src="" alt="">
+                    <img src="img_video/mujeresit.jpg" alt=" logo de Mujeres IT Uruguay">
                 </div>
                 <div class="cards__text--information">
                     <h3>Mujeres IT (Uruguay)</h3>
@@ -196,7 +208,7 @@ actividades y programas de mentoría</p>
             </div>
             <div class="connect__card--only">
                 <div class="cards__img">
-                    <img src="" alt="">
+                    <img src="img_video/chicas-en-tecnologia.jpg" alt=" logo de Chicas en Tecnología">
                 </div>
                 <div class="cards__text--information">
                     <h3>Chicas en Tecnología (Argentina y LATAM)</h3>
@@ -212,8 +224,18 @@ donar a la organización, participar en sus clubes de programación o ser mentor
         </section>
     </main>
     <footer class="footer">
-        <p>&copy; 2025 PriIT - Mujeres en Tecnología</p>
+        <p>&copy; 2025 PriIT | Mujeres en Tecnología</p>
+        <div class="footer__socialMedia">
+            <ul class="socialMedia__icon">
+                <a href="" class="icon"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="" class="icon"><ion-icon name="logo-tiktok"></ion-icon></a>
+                <a href="" class="icon"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="" class="icon"><ion-icon name="logo-github"></ion-icon></a>
+            </ul>
+        </div>
     </footer>
     <script src="js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

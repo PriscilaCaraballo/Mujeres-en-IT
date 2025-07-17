@@ -14,7 +14,6 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    scroll-behavior: smooth; 
 }
 
 /* General Styles */
@@ -23,6 +22,11 @@ body {
     background-color: var(--background);
     color: var(--text);
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* header styles */
 
@@ -58,7 +62,7 @@ body {
 
 /* hero section styles */
 
-.container_hero, .information {
+.container_hero, .information, .important {
     position: relative;
     min-height: 100vh;
     
@@ -132,9 +136,10 @@ video {
 
 /* informacion section */
 .information {
+    scroll-margin-top: 25px;
     display: flex;
     flex-direction: column;
-    margin-top: 35px;
+    margin-top: 45px;
     padding: 2rem;
 }
 
@@ -188,6 +193,7 @@ video {
 
 /* important section */
 .important {
+    scroll-margin-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -204,7 +210,7 @@ video {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 
 .percentage__number {
@@ -221,6 +227,7 @@ video {
 
 /* womens and woman section */
 .womens { 
+    scroll-margin-top: 25px;
     display: flex;
     flex-direction: column;
     margin-top: 35px;
@@ -234,20 +241,20 @@ video {
     gap: 1rem;
 }
 
-.womens__card, .woman__card {
+.womens__card{
     border: #1b3b6f 2px solid;
-
 }
 
 .womens-card__img, .woman-card__img{
     width: 100%;
+    height: 250px;  /*  aca va el cambio segun la imganen */
     object-fit: cover;
 }
 
 .womens-card__role, .woman-card__role {
     color: var(--text);
     font-size: 18px;
-    padding: .7rem;
+    padding: .5rem;
     font-weight: 400;
     box-shadow: 0px 2px 2px  rgba(0, 0, 0, 0.103) ;
 }
@@ -255,7 +262,7 @@ video {
 .womens-card__name, .woman-card__name {
     color: var(--text);
     font-size: 24px;
-    padding: .7rem;
+    padding: .5rem;
     font-weight: 600;
     
 }
@@ -264,8 +271,8 @@ video {
     color: var(--text);
     font-size: 15px;
     font-weight: 400;
-    margin-left: .7rem;
-    margin-bottom: 1rem;
+    margin-left: .5rem;
+    margin-bottom: .8rem;
 }
 
 .womens-card__btn {
@@ -277,34 +284,86 @@ video {
     color: var(--tittles);
     text-decoration: none;
     border: 2px solid var(--tittles);
-    margin-top: 1rem;
+    margin-top: .8rem;
     margin-bottom: 1.5rem;
     margin-left: 25%;
     text-transform: uppercase;
 }
 
 /* woman section */
-.woman {
+.woman__content {
+    position: relative;
+    min-height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 35px;
-    margin-bottom: 45px;
-    padding: 2rem;
+    padding: 2.5rem;
     gap: 2rem;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 90%;
+    background-color: var(--background);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.103);
+    border: 2px solid var(--tittles);
 }
+
+/* modal woman */
+
+.woman {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.close-1, .close-2, .close-3 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fffbf5 ;
+    cursor: pointer;
+}
+
 
 .woman__text{
     text-align: center;
 }
 
+.woman__card {
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+    height: 450px;
+    margin: auto;
+    flex-direction: column;
+    overflow: hidden;
+    border: #1b3b6f 2px solid;
+    margin: auto;
+    padding: 0;
+}
+
+.woman-card__img{
+    object-position: top center;
+}
+
+
 /* 
 connect section */
 .connect {
+    scroll-margin-top: 25px;
     background-color: #1b3b6f;
     display: flex;
     flex-direction: column;
     margin-top: 35px;
-    margin-bottom: 45px;
     padding: 2rem;
 }
 
@@ -362,6 +421,42 @@ connect section */
     text-transform: uppercase;
 }
 
+/* footer section */
+.footer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1b3b6f;
+    min-height: 100px;
+    padding: 20px 50px;
+}
+
+.socialMedia__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap ;
+    gap: 1rem;
+}
+
+.icon {
+    color: #fffbf5;
+    font-size: 30px;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer p {
+    color: #fffbf5;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
 
 /* header efects */
 
@@ -513,6 +608,29 @@ a.hero__btn--scroll {
     color: var(--tittles);
 }
 
+.close-1:hover, .close-2:hover, .close-3:hover {
+    color: #1b3b6f ;
+    transition: color 0.3s ease-in-out;
+    transform: scale(1.2);
+    transition: transform  0.3s ease-in-out;
+}
+
+.woman__content {
+    animation: fadeIn 0.5s ease-in-out;
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* connect effects */
 
 .connect__card--only:hover{
@@ -528,3 +646,24 @@ a.hero__btn--scroll {
     color: var(--background);
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
+
+
+/* footer effects */
+
+.icon:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* .scrolled */
+header.scrolled .text {
+    color: var(--tittles);
+    transition: color 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background-color: var(--background);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
