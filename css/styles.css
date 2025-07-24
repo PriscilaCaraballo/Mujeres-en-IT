@@ -335,11 +335,16 @@ video {
 
 .close-1, .close-2, .close-3 {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: #fffbf5 ;
-    cursor: pointer;
+  top: 0.3rem;
+  right: 0.4rem;
+  font-size: 3rem;
+  color: #1b3b6f;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  line-height: 1;
 }
 
 
@@ -364,6 +369,20 @@ video {
     object-position: top center;
 }
 
+.modal-dialog {
+    margin: 0 auto;
+}
+
+.modal-xl {
+  max-width: 900px;
+  width: 100%;
+}
+
+.modal.show {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
 
 /* 
 connect section */

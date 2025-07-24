@@ -102,8 +102,8 @@
                         <h3 class="womens-card__role">CEO de Nearsure</h3>
                         <h2 class="womens-card__name">Giuliana Corbo</h2>
                         <p class="womens-card__country">Uruguay</p>
-                        <button class="womens-card__btn" id="card__btn--lider1" >Leer más</button>
-                </article>
+                        <button class="womens-card__btn" data-bs-toggle="modal" data-bs-target="#woman-1">Leer más</button>
+                 </article>
                 <article class="womens__card">
                         <img class="womens-card__img" src="img_video/AnaEchavarren2.jpg" alt="foto de Ana Inés Echavarren">
                         <h3 class="womens-card__role">CEO de Infocorp</h3>
@@ -120,25 +120,33 @@
                 </article>
             </div>
         </section>
-        <section class="woman" id="woman-1">
-            <div class="woman__content">
-            <div class="woman__text lider1">
-                <p>empresa uruguaya de outsourcing tecnológico con
-600 empleados en 20 países . Contadora pública egresada de la Universidad de la República
-(Uruguay), dirige esta firma de software especializada en servicios remotos. Ha impulsado la
-incorporación del trabajo remoto: <q>Nearsure es una empresa remota, no importa dónde esté el
-talento</q>. Bajo su liderazgo la compañía busca demostrar al mundo el potencial de talento
-uruguayo en TI.</p>
-            </div>
-            <div class="woman__card">
-                    <img class="woman-card__img" src="img_video/GiulianaCorbo1.jpeg" alt=" foto de Giuliana Corbo">
-                    <h3 class="woman-card__role">CEO de Nearsure</h3>
-                    <h2 class="woman-card__name">Giuliana Corbo</h2>
-                    <p class="woman-card__country">Uruguay</p>
-            </div>
-            </div>
-            <span class="close-1">x</span>
-        </section>
+        <div class="modal woman" id="woman-1" tabindex="-1" aria-hidden="true" data-bs-backdrop="false">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content woman__content">
+      
+        <button type="button" class="close-1" data-bs-dismiss="modal" aria-label="Cerrar">×</button>
+
+      <div class="woman__text lider1">
+        <p>
+          empresa uruguaya de outsourcing tecnológico con 600 empleados en 20 países.
+          Contadora pública egresada de la Universidad de la República (Uruguay), dirige esta firma
+          de software especializada en servicios remotos. Ha impulsado la incorporación del trabajo
+          remoto: <q>Nearsure es una empresa remota, no importa dónde esté el talento</q>. Bajo su
+          liderazgo la compañía busca demostrar al mundo el potencial de talento uruguayo en TI.
+        </p>
+      </div>
+
+      <div class="woman__card">
+        <img class="woman-card__img" src="img_video/GiulianaCorbo1.jpeg" alt="foto de Giuliana Corbo">
+        <h3 class="woman-card__role">CEO de Nearsure</h3>
+        <h2 class="woman-card__name">Giuliana Corbo</h2>
+        <p class="woman-card__country">Uruguay</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
         <section class="woman" id="woman-2">  
             <div class="woman__content">
             <div class="woman__text lider2">
