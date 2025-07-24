@@ -101,9 +101,6 @@ window.addEventListener( "scroll", () => {
   // y si ya no empexo
   if (sectionPosition < window.innerHeight && !started) {
     started = true; // ahora si empezaria
-
-    //contador normal 
-    let counterNumber = 0;
     //no capture los numeros
     const counters = document.querySelectorAll(".percentage__number");
 
