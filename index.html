@@ -17,16 +17,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- navbar -> navbar boostrap -->
     <header class="header">
-        <nav class="header__nav">
-            <ul class="nav__navbar">
-                <li class="navbar__text"><a class="text" href="#container">Home</a></li>
-                <li class="navbar__text"><a class="text" href="#information">Información</a></li>
-                <li class="navbar__text"><a class="text" href="#womens">Mujeres lideres</a></li>
-                <li class="navbar__text"><a class="text" href="#connect">Conecta</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg header__nav">
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav__navbar">
+                <li class="nav-item navbar__text">
+                    <a class="nav-link text" href="#container">Home</a>
+                </li>
+                <li class="nav-item navbar__text">
+                    <a class="nav-link text" href="#information">Información</a>
+                </li>
+                <li class="nav-item navbar__text">
+                    <a class="nav-link text" href="#womens">Mujeres líderes</a>
+                </li>
+                <li class="nav-item navbar__text">
+                    <a class="nav-link text" href="#connect">Conecta</a>
+                </li>
+                </ul>
+            </div>
+            </div>
         </nav>
     </header>
+
+    
     <main class="container-main" id="container">
         <section class="container__hero">
             <div class="hero__text">
@@ -109,83 +127,84 @@
                         <h3 class="womens-card__role">CEO de Infocorp</h3>
                         <h2 class="womens-card__name">Ana Inés Echavarren</h2>
                         <p class="womens-card__country">Uruguay</p>
-                        <button class="womens-card__btn" id="card__btn--lider2" >Leer más</button>
+                        <button class="womens-card__btn" data-bs-toggle="modal" data-bs-target="#woman-2">Leer más</button>
                 </article>
                 <article class="womens__card">
                         <img class="womens-card__img" src="img_video/MarianaCosta2.jpg" alt=" foto de Mariana Costa Checa">
                         <h3 class="womens-card__role">Cofundadora y CEO de Laboratoria</h3>
                         <h2 class="womens-card__name">Mariana Costa Checa</h2>
                         <p class="womens-card__country">Perú</p>
-                        <button class="womens-card__btn" id="card__btn--lider3" >Leer más</button>
+                        <button class="womens-card__btn" data-bs-toggle="modal" data-bs-target="#woman-3">Leer más</button>
                 </article>
             </div>
         </section>
         <div class="modal woman" id="woman-1" tabindex="-1" aria-hidden="true" data-bs-backdrop="false">
-  <div class="modal-dialog modal-dialog-centered modal-xl">
-    <div class="modal-content woman__content">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content woman__content">
       
-        <button type="button" class="close-1" data-bs-dismiss="modal" aria-label="Cerrar">×</button>
-
-      <div class="woman__text lider1">
-        <p>
+                    <button type="button" class="close-1" data-bs-dismiss="modal" aria-label="Cerrar">×</button>
+                    <div class="woman__card">
+                        <img class="woman-card__img" src="img_video/GiulianaCorbo1.jpeg" alt="foto de Giuliana Corbo">
+                        <h3 class="woman-card__role">CEO de Nearsure</h3>
+                        <h2 class="woman-card__name">Giuliana Corbo</h2>
+                        <p class="woman-card__country">Uruguay</p>
+                    </div>
+                    <div class="woman__text lider1">
+                <p>
           empresa uruguaya de outsourcing tecnológico con 600 empleados en 20 países.
           Contadora pública egresada de la Universidad de la República (Uruguay), dirige esta firma
           de software especializada en servicios remotos. Ha impulsado la incorporación del trabajo
           remoto: <q>Nearsure es una empresa remota, no importa dónde esté el talento</q>. Bajo su
           liderazgo la compañía busca demostrar al mundo el potencial de talento uruguayo en TI.
-        </p>
-      </div>
+                </p>
+                    </div>
 
-      <div class="woman__card">
-        <img class="woman-card__img" src="img_video/GiulianaCorbo1.jpeg" alt="foto de Giuliana Corbo">
-        <h3 class="woman-card__role">CEO de Nearsure</h3>
-        <h2 class="woman-card__name">Giuliana Corbo</h2>
-        <p class="woman-card__country">Uruguay</p>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-        <section class="woman" id="woman-2">  
-            <div class="woman__content">
-            <div class="woman__text lider2">
-                <p>empresa de software de banca digital presente
-en más de 40 países . Ingeniera en Computación por la Universidad de la República, trabaja
-en TI desde 1993 y lidera Infocorp desde hace más de una década . Se destaca por resolver
-problemas de negocios mediante la tecnología: <q cite="https://www.elpais.com.uy/el-empresario/ana-ines-echavarren-ceo-de-infocorp-en-uruguay-los-bancos-quieren-ser-casi-empresas-de-tecnologia#:~:text=Hoy%20es%20CEO%20de%20Infocorp%2C,la%20mujer%20en%20la%20tecnolog%C3%ADa">Me encanta resolver problemas de negocios con
-tecnología</q> . Integra además la Cámara Uruguaya de TI (CUTI) para impulsar la ciberseguridad y
-la visibilidad femenina en el sector.</p>
-            </div>
-            <div class="woman__card">
-                    <img class="woman-card__img" src="img_video/AnaEchavarren1.jpg" alt=" foto de Ana Inés Echavarren">
-                    <h3 class="woman-card__role">CEO de Infocorp</h3>
-                    <h2 class="woman-card__name">Ana Inés Echavarren</h2>
-                    <p class="woman-card__country">Uruguay</p>
-            </div>
-            </div>
-            <span class="close-2">x</span>
-        </section>
-        <section class="woman" id="woman-3">
-        <div class="woman__content">
-            <div class="woman__text lider3">
-                <p>organización social que capacita
-a mujeres en desarrollo web y UX . Emprendedora peruana formada en negocios y
-tecnología, ha recibido reconocimientos como BBC 100 Women 2016 y lista “Innovadoras menores
-de 35” del MIT . Su empresa social ha generado miles de egresadas que triplican sus salarios al
-insertarse en TI. Sostiene que <q>no basta con llegar, es crucial que las mujeres alcancen posiciones de
-liderazgo en América Latina </q>, enfatizando la importancia de cultivar nuevas líderes femeninas en
-tecnología.</p>
-            </div>
-            <div class="woman__card">
-                    <img class="woman-card__img" src="img_video/MarianaCosta1.jpg" alt=" foto de Mariana Costa Checa">
-                    <h3 class="woman-card__role">Cofundadora y CEO de Laboratoria</h3>
-                    <h2 class="woman-card__name">Mariana Costa Checa</h2>
-                    <p class="woman-card__country">Perú</p>
+                </div>
             </div>
         </div>
-        <span class="close-3">x</span>
-        </section>
+
+        <!-- Modal Ana Echavarren -->
+        <div class="modal woman" id="woman-2" tabindex="-1" aria-hidden="true" data-bs-backdrop="false">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content woman__content">
+
+                    <button type="button" class="close-2" data-bs-dismiss="modal" aria-label="Cerrar">×</button>
+                    <div class="woman__card">
+                        <img class="woman-card__img" src="img_video/AnaEchavarren1.jpg" alt="foto de Ana Inés Echavarren">
+                        <h3 class="woman-card__role">CEO de Infocorp</h3>
+                        <h2 class="woman-card__name">Ana Inés Echavarren</h2>
+                        <p class="woman-card__country">Uruguay</p>
+                    </div>
+                    <div class="woman__text lider2">
+                        <p>
+                        empresa de software de banca digital presente en más de 40 países. Ingeniera en Computación por la Universidad de la República, trabaja en TI desde 1993 y lidera Infocorp desde hace más de una década. Se destaca por resolver problemas de negocios mediante la tecnología: <q cite="https://www.elpais.com.uy/el-empresario/ana-ines-echavarren-ceo-de-infocorp-en-uruguay-los-bancos-quieren-ser-casi-empresas-de-tecnologia#:~:text=Hoy%20es%20CEO%20de%20Infocorp%2C,la%20mujer%20en%20la%20tecnolog%C3%ADa">Me encanta resolver problemas de negocios con tecnología</q>. Integra además la Cámara Uruguaya de TI (CUTI) para impulsar la ciberseguridad y la visibilidad femenina en el sector.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Modal Mariana Costa -->
+        <div class="modal woman" id="woman-3" tabindex="-1" aria-hidden="true" data-bs-backdrop="false">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content woman__content">
+
+                    <button type="button" class="close-3" data-bs-dismiss="modal" aria-label="Cerrar">×</button>
+                    <div class="woman__card">
+                        <img class="woman-card__img" src="img_video/MarianaCosta1.jpg" alt="foto de Mariana Costa Checa">
+                        <h3 class="woman-card__role">Cofundadora y CEO de Laboratoria</h3>
+                        <h2 class="woman-card__name">Mariana Costa Checa</h2>
+                        <p class="woman-card__country">Perú</p>
+                    </div>
+                    <div class="woman__text lider3">
+                        <p>
+                        organización social que capacita a mujeres en desarrollo web y UX. Emprendedora peruana formada en negocios y tecnología, ha recibido reconocimientos como BBC 100 Women 2016 y lista “Innovadoras menores de 35” del MIT. Su empresa social ha generado miles de egresadas que triplican sus salarios al insertarse en TI. Sostiene que <q>no basta con llegar, es crucial que las mujeres alcancen posiciones de liderazgo en América Latina</q>, enfatizando la importancia de cultivar nuevas líderes femeninas en tecnología.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         <section class="connect" id="connect">
             <div class="connect__tittle">
                 <h2>Conecta</h2>
