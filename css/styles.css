@@ -903,8 +903,8 @@ header.scrolled {
   .close-2,
   .close-3 {
     position: absolute;
-    top: 0.7rem;
-    right: 0.8rem;
+    top: 0.2rem;
+    right: 0.4rem;
     z-index: 20;
     font-size: 2rem;
     background: transparent;
@@ -916,9 +916,6 @@ header.scrolled {
 
 
 /* conecta section  */
-@media screen and (max-width: 1200px) { 
-    
-}
 
 @media (max-width: 992px) {
   .connect__cards {
